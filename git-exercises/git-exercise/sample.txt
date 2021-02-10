@@ -1,0 +1,3 @@
+it's a sample file.
+
+Stash my changes.
