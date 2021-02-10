@@ -1,3 +1,7 @@
 it's a sample file.
 
 Stash my changes.
+
+Release version 1.0 tagged.
+
+
