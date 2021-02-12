@@ -26,7 +26,7 @@ function sumFibs(num) {
 function cacheFunction(cacheFun) {
   const cache = {};
 
-  return function fn(n) {
+  return (n) => {
     if (n in cache) {
       return cache[n];
     }
