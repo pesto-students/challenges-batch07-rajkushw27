@@ -1,5 +1,5 @@
 function removeFalsyValues(array) {
-  return array;
+  return array.filter(Boolean);
 }
 
 export {
