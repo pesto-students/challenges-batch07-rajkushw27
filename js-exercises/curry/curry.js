@@ -1,0 +1,6 @@
+function curry() {
+}
+
+export {
+  curry,
+};
