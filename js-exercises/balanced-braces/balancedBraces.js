@@ -1,5 +1,4 @@
-function balancedBraces(...args) {
-  const inputString = args[0];
+function balancedBraces(str) {
   const stack = [];
 
   const open = {
@@ -14,9 +13,7 @@ function balancedBraces(...args) {
     ')': true,
   };
 
-  for (let i = 0; i < inputString.length; i += 1) {
-    const char = inputString[i];
-
+  for (const char of str) {
     if (open[char]) {
       stack.push(char);
     } else if (closed[char]) {
