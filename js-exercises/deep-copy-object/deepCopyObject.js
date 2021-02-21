@@ -1,10 +1,10 @@
 const deepCopyObject = objToCopy => {
-  const deepCopy = {};
-  for (const obj in objToCopy) {
-    if (typeof (objToCopy[obj]) === 'object' && objToCopy[obj] != null) {
-      deepCopy[obj] = deepCopyObject(deepCopy[obj]);
-    } else deepCopy[obj] = objToCopy[obj];
-  }
+  if (!objToCopy) return objToCopy;
+  if (typeof objToCopy !== 'object') return objToCopy;
+
+  let objectElement = Object.entries(objToCopy);
+  objectElement = objectElement.map(([key, value]) => [key, deepCopyObject(value)]);
+  const deepCopy = Object.fromEntries(objectElement);
   return deepCopy;
 };
 
